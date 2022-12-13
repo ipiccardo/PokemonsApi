@@ -9,17 +9,21 @@ const MoveTable = ({ moves }) => {
 
   useEffect(() => {
     moves?.map(({ move: { url } }) => {
-      setUrlArrayMoves((arrayMoves) => [...arrayMoves, url]);
+      return (
+        setUrlArrayMoves((arrayMoves) => [...arrayMoves, url])
+        )
     });
   }, [moves]);
 
   useEffect(() => {
     urlArrayMoves?.map((url) => {
-      axios
+      return(
+        axios
         .get(url)
         .then(({ data }) =>
-          setMoveData((moveData) => [...moveData, data])
-        );
+        setMoveData((moveData) => [...moveData, data])
+        )
+        )
     });
   }, [urlArrayMoves]);
 

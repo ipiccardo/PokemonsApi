@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export const PaginationControlled = ({setPage, page, types}) => {
   const handleChange = (event, value) => {
@@ -10,7 +10,7 @@ export const PaginationControlled = ({setPage, page, types}) => {
 
 useEffect(() => {
 setPage(0)
-}, [types])
+}, [types, setPage])
 
   return (
     <Stack spacing={2}>

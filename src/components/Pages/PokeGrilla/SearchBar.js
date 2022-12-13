@@ -6,7 +6,7 @@ import { useContext, useEffect } from "react";
 
 
 export const SearchBar = () => {
-  const {showSinglePokemon, setShowSinglePokemon } = useContext( PokeDataContext )
+  const { setShowSinglePokemon } = useContext( PokeDataContext )
 
   const [values, setValues] = useState('');
   const [inputValues, setInputValues] = useState('');
@@ -37,13 +37,13 @@ export const SearchBar = () => {
       } else {
         setTextError('textErrorDisabled')
       }
-  }, [values, error])
+  }, [values, error, inputValues])
 
   useEffect(() => {
       setShowSinglePokemon(singlePokeData)
       setValues('')
       setInputValues('')
-  }, [singlePokeData])
+  }, [singlePokeData, setShowSinglePokemon])
 
 
   return (

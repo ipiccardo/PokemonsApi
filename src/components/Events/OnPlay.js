@@ -3,7 +3,6 @@ import { useState } from "react";
 import ReactHowler from "react-howler";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faMagnifyingGlass,
   faPlay,
   faPause,
 } from "@fortawesome/free-solid-svg-icons";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { LlamadaPokemons } from "../../../helper/LlamadaPokemons";
 import "./PokeScreen.css";
@@ -28,7 +28,6 @@ export const PokeScreen = () => {
     abilities,
     height,
     weight,
-    ...siglePokeData
   } = singlePokeData;
 
   return (

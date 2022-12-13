@@ -17,7 +17,7 @@ export const PokeGrilla = () => {
 
 
   const { pokeData, setPage, page } = PokemonsApi();
-  const { pokeStats, setPokeStats } = LlamadaStats();
+  const { pokeStats } = LlamadaStats();
   const [types, setTypes] = useState("");
   const [clickedStat, setClickedStat] = useState("");
   const { filteredPokeData } = LlamadaTipos(types);
@@ -29,7 +29,7 @@ export const PokeGrilla = () => {
         ? setData(pokeData)
         : setData(pokeStats)
       : setData(filteredPokeData);
-  }, [filteredPokeData, pokeData, types, clickedStat]);
+  }, [filteredPokeData, pokeData, types, clickedStat, pokeStats]);
 
   // Sort original
   data.sort((a, b) => {
