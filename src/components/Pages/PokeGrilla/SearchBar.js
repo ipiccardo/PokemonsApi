@@ -14,6 +14,7 @@ export const SearchBar = () => {
 
   const handleInputChange = (e) => {
     setInputValues(e.target.value)
+    textError === 'textError' && setError(false)
     };
 
   const [pokeName, setPokeName] = useState('')
@@ -32,8 +33,7 @@ export const SearchBar = () => {
     if (error) {
        setTextError('textError')
        setValues('')
-       setInputValues('')
-
+      //  setInputValues('')
       } else {
         setTextError('textErrorDisabled')
       }
@@ -44,7 +44,6 @@ export const SearchBar = () => {
       setValues('')
       setInputValues('')
   }, [singlePokeData, setShowSinglePokemon])
-
 
   return (
     <>
