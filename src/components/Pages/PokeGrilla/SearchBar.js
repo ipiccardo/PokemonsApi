@@ -13,7 +13,7 @@ export const SearchBar = () => {
   const [textError, setTextError] = useState('textErrorDisabled')
 
   const handleInputChange = (e) => {
-    setInputValues(e.target.value)
+    setInputValues(e.target.value.toLowerCase())
     textError === 'textError' && setError(false)
     };
 
@@ -33,7 +33,6 @@ export const SearchBar = () => {
     if (error) {
        setTextError('textError')
        setValues('')
-      //  setInputValues('')
       } else {
         setTextError('textErrorDisabled')
       }

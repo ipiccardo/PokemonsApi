@@ -20,6 +20,7 @@ export const PokeGrillaItem = ({ data }) => {
     showSinglePokemon?.name ? setIsSinglePokemon(true) : setIsSinglePokemon(false)
     }, [showSinglePokemon]);
 
+
   return (
     <>
       {isSinglePokemon ? (
