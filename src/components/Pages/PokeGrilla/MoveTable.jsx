@@ -29,7 +29,6 @@ const MoveTable = ({ moves }) => {
 
   return (
     <div>
-      <h1 style={{marginTop: '20px', marginBottom: '20px'}}>Attacks</h1>
       <MoveTableData moveData={moveData}/>
     </div>
   );

@@ -92,7 +92,7 @@ export const PokeGrillaItem = ({ data }) => {
                         <div
                           style={{
                             backgroundColor: "#1976d2",
-                            width: `${stat["base_stat"]}px`,
+                            width: stat["base_stat"] >= 30 ? `${stat["base_stat"]}px` : '30px',
                             marginLeft: -1,
                             color: "white",
                             borderRadius: 10,
@@ -186,7 +186,7 @@ export const PokeGrillaItem = ({ data }) => {
                               <div
                                 style={{
                                   backgroundColor: "#1976d2",
-                                  width: `${stat["base_stat"]}px`,
+                                  width: stat["base_stat"] >= 30 ? `${stat["base_stat"]}px` : '30px',
                                   marginLeft: -1,
                                   color: "white",
                                   borderRadius: 10,

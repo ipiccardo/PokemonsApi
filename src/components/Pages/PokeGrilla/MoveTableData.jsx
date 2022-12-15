@@ -12,7 +12,8 @@ const MoveTableData = ({ moveData }) => {
     console.log(moveData)
   return (
     <>
-      <div className="stat-table-container">
+      <div className="stat-table-container" style={{ marginTop: '20px'}}>
+      <h1 style={{marginTop: '20px', marginBottom: '20px'}}>Attacks</h1>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 320 }} aria-label="simple table">
             <TableHead>
