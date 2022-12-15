@@ -9,7 +9,9 @@ import Paper from "@mui/material/Paper";
 import { colorTipos } from "../../../helper/colorTipos";
 
 const MoveTableData = ({ moveData }) => {
-    console.log(moveData)
+
+
+
   return (
     <>
       <div className="stat-table-container" style={{ marginTop: '20px', marginBottom: '20px'}}>

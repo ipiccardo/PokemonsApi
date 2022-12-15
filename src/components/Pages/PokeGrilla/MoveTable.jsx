@@ -7,29 +7,25 @@ const MoveTable = ({ moves }) => {
   const [urlArrayMoves, setUrlArrayMoves] = useState([]);
   const [moveData, setMoveData] = useState([]);
 
+
   useEffect(() => {
     moves?.map(({ move: { url } }) => {
-      return (
-        setUrlArrayMoves((arrayMoves) => [...arrayMoves, url])
-        )
+      return setUrlArrayMoves((urlArrayMoves) => [...urlArrayMoves, url]);
     });
   }, [moves]);
 
   useEffect(() => {
     urlArrayMoves?.map((url) => {
-      return(
-        axios
+      return axios
         .get(url)
-        .then(({ data }) =>
-        setMoveData((moveData) => [...moveData, data])
-        )
-        )
+        .then(({ data }) => setMoveData((moveData) => [...moveData, data]));
     });
   }, [urlArrayMoves]);
 
+
   return (
     <div>
-      <MoveTableData moveData={moveData}/>
+      <MoveTableData moveData={moveData} />
     </div>
   );
 };
