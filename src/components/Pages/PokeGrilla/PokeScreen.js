@@ -5,7 +5,7 @@ import "./PokeScreen.css";
 import { colorTipos } from "../../../helper/colorTipos";
 import { Spinner } from "../../Spinner";
 import { Button } from "@mui/material";
-import AbilityTable from './AbilityTable'
+import AbilityTable from "./AbilityTable";
 import StatTable from "./StatTable";
 import MoveTable from "./MoveTable";
 
@@ -18,24 +18,17 @@ export const PokeScreen = () => {
     navigate(-1);
   };
 
-  const {
-    id,
-    sprites,
-    name,
-    types,
-    stats,
-    moves,
-    abilities,
-    height,
-    weight,
-  } = singlePokeData;
+  const { id, sprites, name, types, stats, moves, abilities, height, weight } =
+    singlePokeData;
 
   return (
     <>
       {sprites ? (
         <div className="pokeScreen-container">
           <div className="margin-button">
-            <Button variant='contained' sx={{marginBottom: '20px'}}
+            <Button
+              variant="contained"
+              sx={{ marginBottom: "20px" }}
               onClick={handleReturn}
               size="small"
               color="primary"
@@ -54,7 +47,7 @@ export const PokeScreen = () => {
                 alt={name}
               ></img>
             </div>
-            <div className="animate__animated animate__fadeIn">
+            <div className="animate__animated animate__fadeIn pokeScreen-info">
               <h1 style={{ textAlign: "left" }}>
                 #{id} {name ? name[0].toUpperCase() + name?.substring(1) : null}
               </h1>
@@ -80,12 +73,12 @@ export const PokeScreen = () => {
                 <p>Height: {height / 10} m</p>
                 <p>Weight: {weight / 10} kg</p>
               </div>
-              <AbilityTable abilities={abilities} />
             </div>
           </div>
           <div style={{ marginLeft: 50, marginTop: 50 }}>
-            <StatTable stats={stats}/>
-            <MoveTable moves={moves}/>
+            <AbilityTable abilities={abilities} />
+            <StatTable stats={stats} />
+            <MoveTable moves={moves} />
           </div>
         </div>
       ) : (

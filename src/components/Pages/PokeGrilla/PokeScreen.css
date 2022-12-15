@@ -67,3 +67,10 @@
         margin-right: 0;
     }
 }
+
+
+.pokeScreen-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

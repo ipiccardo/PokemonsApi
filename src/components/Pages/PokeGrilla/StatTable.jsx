@@ -11,7 +11,7 @@ import "./statTable.css";
 const StatTable = ({ stats }) => {
   return (
     <>
-      <div className="stat-table-container">
+      <div className="stat-table-container" style={{marginBottom: '20px'}}>
                 <h1 style={{width: '100%'}}>Stats</h1>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 320 }} aria-label="simple table">
