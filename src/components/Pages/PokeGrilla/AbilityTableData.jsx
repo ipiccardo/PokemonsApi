@@ -19,8 +19,8 @@ const AbilityTableData = ({ hiddenAbility, abilitiesData }) => {
       <Table sx={{ minWidth: 320 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="center">Abilities</TableCell>
-            <TableCell align="center">Description</TableCell>
+            <TableCell align="left">Abilities</TableCell>
+            <TableCell align="left">Description</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
