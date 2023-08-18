@@ -1,6 +1,6 @@
 import React from "react";
-import { HomeScreen } from "../Pages/HomeScreen";
-import { Tournament } from "../Pages/Tournament";
+// import { HomeScreen } from "../Pages/HomeScreen";
+// import { Tournament } from "../Pages/Tournament";
 import { RandomPokemon } from "../Pages/RandomPokemon";
 import { PokeGrilla } from "../Pages/PokeGrilla";
 import { PokeScreen } from "../Pages/PokeGrilla";
