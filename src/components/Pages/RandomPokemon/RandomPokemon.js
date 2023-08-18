@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import { getPokemons } from '../../../helper/allPokemons.ts';
-import './RandomPokemon.css';
+import { getPokemons } from "../../../helper/allPokemons.ts";
+import "./RandomPokemon.css";
 import swal from "sweetalert";
 import SearchBar from "../../SearchBar/SearchBar";
-import {Title} from '../../Title'
+import { Title } from "../../Title";
 import OnPlay from "../../Events/OnPlay";
 import { Spinner } from "../../Spinner";
-
 
 export const RandomPokemon = () => {
   const [search, setSearch] = useState("");
@@ -57,7 +56,6 @@ export const RandomPokemon = () => {
     }
   };
 
-
   const handleChange = () => {
     getPokemons.random().then(({ id, image, name }) => {
       setPokes({
@@ -91,7 +89,6 @@ export const RandomPokemon = () => {
       };
     });
   };
-
 
   const showPokemon = (e) => {
     e.preventDefault();
@@ -131,39 +128,34 @@ export const RandomPokemon = () => {
     setDisabled(false);
     setFirstPushAlert(true);
     setAddClass("nonNextPokemon");
-    localStorage.removeItem("contador")
-    localStorage.removeItem("contadorIncorrectas")
-    window.location.reload();
+    localStorage.removeItem("contador");
+    localStorage.removeItem("contadorIncorrectas");
+    // window.location.reload();
   };
-
-
 
   useEffect(() => {
     // si contador está en 0 ES FALSE
-     contador ? 
-     getPokemons.random().then(({ id, image, name }) => {
-      setPokes({
-        id,
-        image,
-        name,
-      });
-    })
-     : 
-     setPokes({
-      id: 4,
-      image:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-      name: "charmander",
-    }) 
-     
-    
+    contador
+      ? getPokemons.random().then(({ id, image, name }) => {
+          setPokes({
+            id,
+            image,
+            name,
+          });
+        })
+      : setPokes({
+          id: 4,
+          image:
+            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+          name: "charmander",
+        });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
-    <Title />
+      <Title />
       <div className="container">
         <h1 className={showTitle}>
           Felicitaciones, es{" "}
@@ -174,9 +166,18 @@ export const RandomPokemon = () => {
         </h1>
         <h2 className={showid}>Pokemon N°: {pokes.id}</h2>
         <div className="imgContainer">
-          <img src={pokes ? pokes.image : <Spinner />} alt="imagen pokemon" className={filter} />
+          <img
+            src={pokes ? pokes.image : <Spinner />}
+            alt="imagen pokemon"
+            className={filter}
+          />
         </div>
-        <SearchBar setSearch={setSearch} search={search} showPokemon={showPokemon} disabled={disabled}/>
+        <SearchBar
+          setSearch={setSearch}
+          search={search}
+          showPokemon={showPokemon}
+          disabled={disabled}
+        />
         <br />
         <div className="buttonsContainer">
           <button
@@ -213,10 +214,7 @@ export const RandomPokemon = () => {
         <h1>{contadorIncorrectas}</h1>
       </div>
 
-    <OnPlay />
-     
+      <OnPlay />
     </>
   );
 };
-
-
