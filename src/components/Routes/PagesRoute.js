@@ -18,7 +18,7 @@ const PagesRoute = () => {
           </PublicRoute>
         }
       />
-      <Route path="/*" element={<Navigate to="HomeScreen" />} />
+      <Route path="/*" element={<Navigate to="PokeScreen" />} />
     </Routes>
   );
 };

@@ -103,18 +103,24 @@ const HamburgerMenu = ({ open, setOpen }) => {
             marginRight: "auto",
           }}
         >
+          {/* <ListItemButton>
+            <NavLink onClick={handleDrawerClose} to={"/HomeScreen"}>
+              Home
+            </NavLink>
+          </ListItemButton> */}
           <ListItemButton>
-            <NavLink onClick={handleDrawerClose} to={"/HomeScreen"}>Home</NavLink>
+            <NavLink onClick={handleDrawerClose} to={"/PokeGrid"}>
+              Pokemon Grid
+            </NavLink>
           </ListItemButton>
           <ListItemButton>
-            <NavLink onClick={handleDrawerClose} to={"/RandomPokemon"}>Random Pokemon</NavLink>
+            <NavLink onClick={handleDrawerClose} to={"/RandomPokemon"}>
+              Random Pokemon
+            </NavLink>
           </ListItemButton>
-          <ListItemButton>
-            <NavLink onClick={handleDrawerClose} to={"/PokeGrid"}>Pokemon Grid</NavLink>
-          </ListItemButton>
-          <ListItemButton>
+          {/* <ListItemButton>
             <NavLink onClick={handleDrawerClose} to={"/Tournament"}>Tournament</NavLink>
-          </ListItemButton>
+          </ListItemButton> */}
         </List>
         <Divider />
       </Drawer>

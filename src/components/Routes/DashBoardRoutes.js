@@ -10,15 +10,15 @@ export const DashBoardRoutes = () => {
   return (
     <>
       <Routes>
-        <Route path="/HomeScreen" element={<HomeScreen />} />
-        <Route path="/Tournament" element={<Tournament />} />
+        {/* <Route path="/HomeScreen" element={<HomeScreen />} /> */}
+        {/* <Route path="/Tournament" element={<Tournament />} /> */}
         <Route
           path="/RandomPokemon"
           element={<RandomPokemon id={4} name={"charmander"} />}
         />
         <Route path="/PokeGrid" element={<PokeGrilla />} />
         <Route path="/PokeScreen:pokeId" element={<PokeScreen />} />
-        <Route path="/*" element={<Navigate to="HomeScreen" />} />
+        <Route path="/*" element={<Navigate to="PokeScreen" />} />
       </Routes>
     </>
   );
