@@ -1,14 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../../../Auth/Context";
+// import { useNavigate } from "react-router-dom";
+// import { useContext } from "react";
+// import { AuthContext } from "../../../Auth/Context";
 import "./Login.css";
 
-
 export const LoginScreen = () => {
-  const navigate = useNavigate();
-  const { onLogin } = useContext(AuthContext);
+  // const navigate = useNavigate();
+  // const { onLogin } = useContext(AuthContext);
   const [form, setForm] = useState({
     usuario: "",
     contraseña: "",
@@ -29,19 +28,19 @@ export const LoginScreen = () => {
 
   useEffect(() => {}, [form]);
 
-  const handleLogin = () => {
-    const lastPath = localStorage.getItem("lastPath") || "/";
+  // const handleLogin = () => {
+  //   const lastPath = localStorage.getItem("lastPath") || "/";
 
-    onLogin(usuario);
+  //   onLogin(usuario);
 
-    navigate(lastPath, {
-      replace: true,
-    });
-  };
+  //   navigate(lastPath, {
+  //     replace: true,
+  //   });
+  // };
 
   return (
     <div className="container mt-5">
-      <h1>Login</h1>
+      {/* <h1>Login</h1> */}
       <hr />
       <form className="form" onSubmit={handleSubmit}>
         <input
@@ -59,12 +58,15 @@ export const LoginScreen = () => {
           onChange={handleChange}
         ></input>
       </form>
-
+      {/* 
       <button onClick={handleLogin} className="btn btn-primary">
         Login
-      </button>
+      </button> */}
 
-      <h3 style={{textAlign: 'center', marginTop: '40px'}}>Por el momento pone el nombre de Usuario que te gustaría tenér, y cualqueir contraseña</h3>
+      <h3 style={{ textAlign: "center", marginTop: "40px" }}>
+        Por el momento pone el nombre de Usuario que te gustaría tenér, y
+        cualqueir contraseña
+      </h3>
     </div>
   );
 };

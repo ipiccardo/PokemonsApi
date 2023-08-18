@@ -17,7 +17,7 @@ export const DashBoardRoutes = () => {
           element={<RandomPokemon id={4} name={"charmander"} />}
         />
         <Route path="/PokeGrid" element={<PokeGrilla />} />
-        <Route path="/PokeScreen:pokeId"  element={<PokeScreen />} />
+        <Route path="/PokeScreen:pokeId" element={<PokeScreen />} />
         <Route path="/*" element={<Navigate to="HomeScreen" />} />
       </Routes>
     </>

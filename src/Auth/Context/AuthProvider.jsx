@@ -2,7 +2,7 @@ import React from "react";
 import { AuthContext } from "./AuthContext";
 import { AuthReducer } from "./AuthReducer";
 import { useReducer } from "react";
-import  {types}  from '../Types/Types';
+import { types } from "../Types/Types";
 
 const initialState = {
   logged: false,
@@ -33,22 +33,19 @@ export const AuthProvider = ({ children }) => {
     dispatch(action);
   };
 
-const onLogout = async (name = '') => {
+  const onLogout = async (name = "") => {
+    const user = {
+      id: "ABC",
+      name,
+    };
 
-  const user = {
-    id: "ABC",
-    name,
+    const action = {
+      type: types.logout,
+      payload: user,
+    };
+    localStorage.removeItem("user");
+    dispatch(action);
   };
-
-  const action = {
-    type: types.logout,
-    payload: user,
-  };
-  localStorage.removeItem('user')
-  dispatch(action)
-}
-
-
 
   return (
     <AuthContext.Provider

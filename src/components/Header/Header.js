@@ -3,26 +3,16 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import HamburgerMenu from "./HamburgerMenu";
 import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Auth/Context";
 
 const Header = () => {
   const [open, setOpen] = React.useState(false);
-  const navigate = useNavigate();
-  const { user, onLogout } = useContext(AuthContext);
-
-  const handleLogout = () => {
-    navigate("/login", {
-      replace: true,
-    });
-    onLogout("Iniciar Sesión");
-  };
+  const { user } = useContext(AuthContext);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -44,17 +34,14 @@ const Header = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               PokeAPP
             </Typography>
-            <NavLink
-              to={"/login"}
-              style={{ color: "white", fontWeight: "bold" }}
-            >
+            <NavLink to={"/"} style={{ color: "white", fontWeight: "bold" }}>
               <span className="nav-item nav-link text-info">{user?.name}</span>
 
-              <Button color="inherit">Login</Button>
+              {/* <Button color="inherit">Login</Button> */}
 
-              <Button onClick={handleLogout} color="inherit">
+              {/* <Button onClick={handleLogout} color="inherit">
                 Logout
-              </Button>
+              </Button> */}
             </NavLink>
           </Toolbar>
         </AppBar>

@@ -1,116 +1,117 @@
-
-
 .list {
-    color: grey;
-    width: 100%;
-    margin: none;
-    text-align:center;
+  color: grey;
+  width: 100%;
+  margin: none;
+  text-align: center;
 }
-
 
 .divGrid {
-    display: flex;
-    width: 50vw;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  width: 50vw;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 .divGridDiv {
-    margin: 5px;
-    margin-top: 10px
+  margin: 5px;
+  margin-top: 10px;
 }
 
-
 .css-o69gx8-MuiCardMedia-root {
-    width: 60% !important;
-    margin-top: 50px;
+  width: 60% !important;
+  margin-top: 50px;
 }
 
 .css-h93ljk-MuiTypography-root {
-    text-align: center;
+  text-align: center;
 }
-
 
 .type {
-    padding: 10px;
-    border-radius: 20px;
-    top: 5px;
-    right: 3px;
-    color: white;
-    font-weight: bold;
-    border: solid 1px;
-    text-align: center;
-    width: 100px;
-    height: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  top: 5px;
+  right: 3px;
+  color: white;
+  font-weight: bold;
+  border: solid 1px;
+  text-align: center;
+  width: 100px;
+  height: 20px;
 }
-
-
 
 .secondType {
-    padding: 10px;
-    border-radius: 20px;
-    top: 5px;
-    right: 50px;
-    margin-right: 5px;
-    color: white;
-    font-weight: bold;
-    border: solid 1px;
-    text-align: center;
-    width: 100px;
+  padding: 10px;
+  border-radius: 20px;
+  top: 5px;
+  right: 50px;
+  margin-right: 5px;
+  color: white;
+  font-weight: bold;
+  border: solid 1px;
+  text-align: center;
+  width: 100px;
 }
 
-
 .contenedorSpans {
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    justify-content: right;
-    margin-top: 5px;
-    margin-right: 10px;
-    height: 20px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  justify-content: right;
+  margin-top: 5px;
+  margin-right: 10px;
+  height: 20px;
 }
 
 .typeText {
-    margin-top: -12px;
+  margin-top: -12px;
 }
 
 .borderDiv {
-    border: solid grey 1px;
-    margin-bottom: 8px;
+  border: solid grey 1px;
+  margin-bottom: 8px;
 }
-
 
 .backgroundSpinner {
-    width: 100vw;
-    height: 100vh;
-    padding-top: 100px;
-    margin-top: -110px;
-    background-color: lightgray;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+  margin-top: -110px;
+  background-color: lightgray;
 }
-
 
 .pokegrillaContainer {
-    display: flex;
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  flex-direction: column;
 }
 
+.pokegrillaContainer > ul {
+  display: flex;
+  flex-direction: row !important;
+  max-width: 1200px;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+  flex-wrap: wrap;
+}
 
 @media (max-width: 650px) {
-    .pokegrillaContainer {
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-    .pokegrillaContainer ul {
-        position: relative !important;
-        flex-direction: row !important;
-        flex-wrap: wrap;
-        margin-left: -15px;
-    }
-    .pokegrillaContainer ul li {
-        margin: 5px
-    }
+  .pokegrillaContainer {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .pokegrillaContainer ul {
+    position: relative !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    margin-left: -15px;
+  }
+  .pokegrillaContainer ul li {
+    margin: 5px;
+  }
 }
