@@ -18,7 +18,7 @@ export const DashBoardRoutes = () => {
         />
         <Route path="/PokeGrid" element={<PokeGrilla />} />
         <Route path="/PokeScreen:pokeId" element={<PokeScreen />} />
-        <Route path="/*" element={<Navigate to="PokeScreen" />} />
+        <Route path="/*" element={<Navigate to="PokeGrid" />} />
       </Routes>
     </>
   );
