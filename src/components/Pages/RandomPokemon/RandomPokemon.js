@@ -130,7 +130,7 @@ export const RandomPokemon = () => {
     setAddClass("nonNextPokemon");
     localStorage.removeItem("contador");
     localStorage.removeItem("contadorIncorrectas");
-    // window.location.reload();
+    window.location.reload();
   };
 
   useEffect(() => {
